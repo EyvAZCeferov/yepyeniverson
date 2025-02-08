@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"github.com/EyvAZCeferov/enversonconfig/pkg/chat"
-	w "github.com/EyvAZCeferov/enversonconfig/pkg/webrtc"
+	"github.com/eyvazceferov/yepyeniverson/pkg/chat"
+	w "github.com/eyvazceferov/yepyeniverson/pkg/webrtc"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"

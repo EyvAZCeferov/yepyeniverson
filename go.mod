@@ -1,4 +1,4 @@
-module github.com/EyvAZCeferov/enversonconfig
+module github.com/eyvazceferov/yepyeniverson
 
 go 1.21
 

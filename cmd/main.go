@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/EyvAZCeferov/enversonconfig/internal/server"
+	"github.com/eyvazceferov/yepyeniverson/internal/server"
 )
 
 func main() {

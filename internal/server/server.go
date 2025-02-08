@@ -7,8 +7,8 @@ import (
 
 	"encoding/json"
 	"fmt"
-	"github.com/EyvAZCeferov/enversonconfig/internal/handlers"
-	w "github.com/EyvAZCeferov/enversonconfig/pkg/webrtc"
+	"github.com/eyvazceferov/yepyeniverson/internal/handlers"
+	w "github.com/eyvazceferov/yepyeniverson/pkg/webrtc"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"

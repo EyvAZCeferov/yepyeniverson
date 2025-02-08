@@ -3,10 +3,10 @@ package webrtc
 import (
 	"encoding/json"
 	"log"
-	// "github.com/EyvAZCeferov/enversonconfig/pkg/chat"
+	// "github.com/eyvazceferov/yepyeniverson/pkg/chat"
 	"sync"
 
-	// "github.com/EyvAZCeferov/enversonconfig/config"
+	// "github.com/eyvazceferov/yepyeniverson/config"
 	"github.com/gofiber/websocket/v2"
 	"github.com/pion/webrtc/v3"
 	// "time"

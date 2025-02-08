@@ -10,7 +10,7 @@ import (
 	"github.com/pion/rtcp"
 	"github.com/pion/webrtc/v3"
 
-	"github.com/EyvAZCeferov/enversonconfig/internal/server"
+	"github.com/eyvazceferov/yepyeniverson/internal/server"
 )
 
 var (

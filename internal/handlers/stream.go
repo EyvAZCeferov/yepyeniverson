@@ -3,10 +3,10 @@ package handlers
 import (
 	"fmt"
 	// "os"
-	w "github.com/EyvAZCeferov/enversonconfig/pkg/webrtc"
+	w "github.com/eyvazceferov/yepyeniverson/pkg/webrtc"
 	"time"
 
-	// "github.com/EyvAZCeferov/enversonconfig/config"
+	// "github.com/eyvazceferov/yepyeniverson/config"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
 )
