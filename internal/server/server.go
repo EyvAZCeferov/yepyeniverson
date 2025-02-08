@@ -21,7 +21,7 @@ import (
 )
 
 var (
-	addr         = flag.String("addr", "0.0.0.0:6333", "")
+	addr         = flag.String("addr", "0.0.0.0:1243", "")
 	cert         = flag.String("cert", "", "")
 	key          = flag.String("key", "", "")
 	sessionStore *session.Store
@@ -90,7 +90,7 @@ func Run() error {
 	app := setupApp()
 
 	if *addr == ":" {
-		*addr = ":6333"
+		*addr = ":1243"
 	}
 
 	app.Use(logger.New())
@@ -185,10 +185,10 @@ func Run() error {
 	go dispatchKeyFrames()
 
 	if *cert != "" {
-		return app.ListenTLS("0.0.0.0:6333", *cert, *key)
+		return app.ListenTLS("0.0.0.0:1243", *cert, *key)
 	}
 	// return app.Listen(*addr)
-	return app.Listen("0.0.0.0:6333")
+	return app.Listen("0.0.0.0:1243")
 }
 
 func dispatchKeyFrames() {
