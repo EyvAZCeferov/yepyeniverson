@@ -4,8 +4,8 @@ import (
 	"fmt"
 // 	"os"
 	"time"
-	"v/pkg/chat"
-	w "v/pkg/webrtc"
+	"github.com/EyvAZCeferov/enversonconfig/internal/server"
+	w "github.com/EyvAZCeferov/enversonconfig/pkg/webrtc"
 
 	"crypto/sha256"
 
