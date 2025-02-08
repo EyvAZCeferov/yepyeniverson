@@ -1,7 +1,8 @@
-FROM golang:1.20-alpine AS builder
+FROM golang:1.21-alpine AS builder
 WORKDIR /srcnew
 COPY go.mod go.sum ./
-RUN go mod download
+RUN go mod tidy && go mod download
+
 COPY . .
 #ENV GO111MODULE=on
 RUN CGO_ENABLED=0 go build -o /bin/app ./cmd
