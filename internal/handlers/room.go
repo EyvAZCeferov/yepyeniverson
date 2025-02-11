@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"fmt"
-// 	"os"
 	"time"
 	"github.com/eyvazceferov/yepyeniverson/pkg/chat"
 	w "github.com/eyvazceferov/yepyeniverson/pkg/webrtc"
@@ -26,10 +25,7 @@ func Room(c *fiber.Ctx) error {
 		return nil
 	}
 
-	ws := "ws"
-// 	if os.Getenv("ENVIRONMENT") == "PRODUCTION" {
-		ws = "wss"
-// 	}
+	ws := "wss"
 
 	uuid, suuid, _ := createOrGetRoom(uuid)
 	return c.Render("peer", fiber.Map{
@@ -49,6 +45,7 @@ func RoomWebsocket(c *websocket.Conn) {
 	}
 
 	_, _, room := createOrGetRoom(uuid)
+	defer c.Close()
 	w.RoomConn(c, room.Peers)
 }
 
