@@ -100,62 +100,6 @@ func Run() error {
 		AllowHeaders:     "Origin,Content-Type,Accept,Authorization",
 		AllowCredentials: false,
 	}))
-	app.Use(cors.New())
-
-	// app.Use(func(c *fiber.Ctx) error {
-	// 	if c.Path() == "/login" || c.Path() == "/register" {
-	// 		return c.Next()
-	// 	}
-	// 	ext := filepath.Ext(c.Path())
-	// 	if ext == ".css" || ext == ".js" || ext == ".png" || ext == ".jpg" || ext == ".svg" {
-	// 		return c.Next()
-	// 	}
-
-	// 	if c.Path() == "/room/"+c.Params("uuid")+"/websocket" ||
-	// 		c.Path() == "/room/"+c.Params("uuid")+"/chat/websocket" ||
-	// 		c.Path() == "/room/"+c.Params("uuid")+"/viewer/websocket" ||
-	// 		c.Path() == "/stream/"+c.Params("suuid")+"/websocket" ||
-	// 		c.Path() == "/stream/"+c.Params("suuid")+"/chat/websocket" ||
-	// 		c.Path() == "/stream/"+c.Params("suuid")+"/viewer/websocket" {
-	// 		return c.Next()
-	// 	}
-
-	// 	cookies := c.Cookies("auth_token")
-	// 	if cookies == "" {
-	// 		done := make(chan string, 1)
-	// 		go func() {
-	// 			token, err := fetchUserCookie()
-	// 			if err == nil && token != "" {
-	// 				done <- token
-	// 			} else {
-	// 				done <- ""
-	// 			}
-	// 			close(done)
-	// 		}()
-	// 		select {
-	// 		case token := <-done:
-	// 			if token != "" {
-	// 				cookie := &fiber.Cookie{
-	// 					Name:     "auth_token",
-	// 					Value:    token,
-	// 					SameSite: "lax",
-	// 					Path:     "/",
-	// 					// Domain:   ".enverson.com",
-	// 					MaxAge: 365 * 24 * 3600,
-	// 				}
-	// 				c.Cookie(cookie)
-	// 				originalPath := c.Path()
-	// 				return c.Redirect(originalPath, fiber.StatusMovedPermanently)
-	// 			} else {
-	// 				return c.Redirect("/login")
-	// 			}
-	// 		case <-time.After(time.Second * 30):
-	// 			return c.Redirect("/login")
-	// 		}
-	// 	}
-
-	// 	return c.Next()
-	// })
 
 	app.Get("/", handlers.Welcome)
 	app.Get("/room/create", handlers.RoomCreate)
