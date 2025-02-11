@@ -157,9 +157,6 @@ func Run() error {
 		return c.Next()
 	})
 
-	app.Get("/login", handlers.Login)
-	app.Post("/login", handlers.LoginPostfunc)
-	app.Get("/register", handlers.Register)
 	app.Get("/", handlers.Welcome)
 	app.Get("/room/create", handlers.RoomCreate)
 	app.Get("/room/:uuid", handlers.Room)
@@ -187,7 +184,6 @@ func Run() error {
 	if *cert != "" {
 		return app.ListenTLS("0.0.0.0:1243", *cert, *key)
 	}
-	// return app.Listen(*addr)
 	return app.Listen("0.0.0.0:1243")
 }
 
